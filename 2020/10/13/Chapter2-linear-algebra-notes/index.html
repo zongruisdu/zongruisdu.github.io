@@ -20,28 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lyosha&#39;s blogs">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="Vector SpaceVector Spacethe fundamental concepts of linear algebra are vector space.  Vector spaces are sets of some elements statisfying some rules. Usually the vector space of most interest to us is">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chapter2 linear algebra notes">
+<meta property="og:url" content="http://example.com/2020/10/13/Chapter2-linear-algebra-notes/index.html">
 <meta property="og:site_name" content="Lyosha&#39;s blogs">
+<meta property="og:description" content="Vector SpaceVector Spacethe fundamental concepts of linear algebra are vector space.  Vector spaces are sets of some elements statisfying some rules. Usually the vector space of most interest to us is">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-13T15:53:51.000Z">
+<meta property="article:modified_time" content="2020-10-13T17:00:07.199Z">
 <meta property="article:author" content="Lyosha">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/10/13/Chapter2-linear-algebra-notes/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Lyosha's blogs</title>
+  <title>Chapter2 linear algebra notes | Lyosha's blogs</title>
   
 
 
@@ -145,9 +149,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -163,10 +168,9 @@
       <meta itemprop="name" content="Lyosha's blogs">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/13/Chapter2-linear-algebra-notes/" class="post-title-link" itemprop="url">Chapter2 linear algebra notes</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Chapter2 linear algebra notes
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -209,7 +213,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Vector-Space"><a href="#Vector-Space" class="headerlink" title="Vector Space"></a>Vector Space</h2><h3 id="Vector-Space-1"><a href="#Vector-Space-1" class="headerlink" title="Vector Space"></a>Vector Space</h3><p>the fundamental concepts of linear algebra are <strong>vector space.</strong>  Vector spaces are sets of some elements statisfying some rules. Usually the vector space of most interest to us is $C^{n}$.</p>
+        <h2 id="Vector-Space"><a href="#Vector-Space" class="headerlink" title="Vector Space"></a>Vector Space</h2><h3 id="Vector-Space-1"><a href="#Vector-Space-1" class="headerlink" title="Vector Space"></a>Vector Space</h3><p>the fundamental concepts of linear algebra are <strong>vector space.</strong>  Vector spaces are sets of some elements statisfying some rules. Usually the vector space of most interest to us is $C^{n}$.</p>
 <h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><p>Let $z = (z_1, z_2, \cdots, z_n) \in C^{n}$, then $z$ is a <strong>vector</strong>. Basic operations like addition and multiplication are supported between vectors. A vector space must be closed under multiplication and addtion.</p>
 <p>In Direct Notations, we usually use “$|\varphi\rangle$” to denote a vector (also called a “ket”).</p>
 <h3 id="Subspace"><a href="#Subspace" class="headerlink" title="Subspace"></a>Subspace</h3><p>A <strong>vector subspace</strong>  $W$ of a vector space $V$ is a subset of $V$, that is, $W$ also must be closed under scalar multiplication and addition.</p>
@@ -224,21 +228,23 @@
 <p>A notable fact is that when using same input base and output base, the matrix representing of an linear operator express exactly meaning as this matrix in context of matrix multiplication.</p>
 <h3 id="Pauli-Matrix"><a href="#Pauli-Matrix" class="headerlink" title="Pauli Matrix"></a>Pauli Matrix</h3><p>$$\sigma_0=I=\left[  \begin{matrix} 1 &amp; 0 \ 0&amp;1 \end{matrix}  \right]$$<br>$$\sigma_1=X=\left[  \begin{matrix} 0 &amp; 1 \ 1&amp;0 \end{matrix}  \right]$$<br>$$\sigma_2=Y=\left[  \begin{matrix} 0 &amp; -i \ i&amp;0 \end{matrix}  \right]$$<br>$$\sigma_3=Z=\left[  \begin{matrix} 1 &amp; 0 \ 0&amp;-1 \end{matrix}  \right]$$</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -291,6 +297,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector-Space"><span class="nav-number">1.</span> <span class="nav-text">Vector Space</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vector-Space-1"><span class="nav-number">1.1.</span> <span class="nav-text">Vector Space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vector"><span class="nav-number">1.2.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Subspace"><span class="nav-number">1.3.</span> <span class="nav-text">Subspace</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bases-and-Linear-Independence"><span class="nav-number">2.</span> <span class="nav-text">Bases and Linear Independence</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Independence"><span class="nav-number">2.1.</span> <span class="nav-text">Linear Independence</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-operater-and-Matrix"><span class="nav-number">3.</span> <span class="nav-text">Linear operater and Matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-operator"><span class="nav-number">3.1.</span> <span class="nav-text">linear operator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matrix"><span class="nav-number">3.2.</span> <span class="nav-text">Matrix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pauli-Matrix"><span class="nav-number">3.3.</span> <span class="nav-text">Pauli Matrix</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
