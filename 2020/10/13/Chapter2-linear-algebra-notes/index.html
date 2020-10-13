@@ -28,7 +28,7 @@
 <meta property="og:description" content="Vector SpaceVector Spacethe fundamental concepts of linear algebra are vector space.  Vector spaces are sets of some elements statisfying some rules. Usually the vector space of most interest to us is">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-13T15:53:51.000Z">
-<meta property="article:modified_time" content="2020-10-13T17:00:07.199Z">
+<meta property="article:modified_time" content="2020-10-13T17:19:43.467Z">
 <meta property="article:author" content="Lyosha">
 <meta name="twitter:card" content="summary">
 
@@ -186,7 +186,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-14 01:00:07" itemprop="dateModified" datetime="2020-10-14T01:00:07+08:00">2020-10-14</time>
+                <time title="Modified: 2020-10-14 01:19:43" itemprop="dateModified" datetime="2020-10-14T01:19:43+08:00">2020-10-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -194,11 +194,15 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/quantum-computing-quantum-information/" itemprop="url" rel="index"><span itemprop="name">quantum computing & quantum information</span></a>
+                  <a href="/categories/research/" itemprop="url" rel="index"><span itemprop="name">research</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/quantum-computing-quantum-information/QCQI-notes-solutions/" itemprop="url" rel="index"><span itemprop="name">QCQI notes & solutions</span></a>
+                  <a href="/categories/research/quantum-computing-quantum-information/" itemprop="url" rel="index"><span itemprop="name">quantum computing & quantum information</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/research/quantum-computing-quantum-information/QCQI-notes-solutions/" itemprop="url" rel="index"><span itemprop="name">QCQI notes & solutions</span></a>
                 </span>
             </span>
 
@@ -226,8 +230,7 @@
 <p>$A|v_j\rangle =\sum_{i}A_{ij}|w_i\rangle$. </p>
 <p>Where $A_{ij}$ is the element of $i$-th row and $j$-th column of matrix representing. Note that to make the connection between matrices and linear operators, we must<br>specify a set of input and output basis states for the input and output vector spaces of<br>the linear operator!</p>
 <p>A notable fact is that when using same input base and output base, the matrix representing of an linear operator express exactly meaning as this matrix in context of matrix multiplication.</p>
-<h3 id="Pauli-Matrix"><a href="#Pauli-Matrix" class="headerlink" title="Pauli Matrix"></a>Pauli Matrix</h3><p>$$\sigma_0=I=\left[  \begin{matrix} 1 &amp; 0 \ 0&amp;1 \end{matrix}  \right]$$<br>$$\sigma_1=X=\left[  \begin{matrix} 0 &amp; 1 \ 1&amp;0 \end{matrix}  \right]$$<br>$$\sigma_2=Y=\left[  \begin{matrix} 0 &amp; -i \ i&amp;0 \end{matrix}  \right]$$<br>$$\sigma_3=Z=\left[  \begin{matrix} 1 &amp; 0 \ 0&amp;-1 \end{matrix}  \right]$$</p>
-
+<h3 id="Pauli-Matrix"><a href="#Pauli-Matrix" class="headerlink" title="Pauli Matrix"></a>Pauli Matrix</h3><script type="math/tex; mode=display">\sigma_0=I=\left[  \begin{matrix} 1 & 0 \\ 0&1 \end{matrix}  \right]</script><script type="math/tex; mode=display">\sigma_1=X=\left[  \begin{matrix} 0 & 1 \\ 1&0 \end{matrix}  \right]</script><script type="math/tex; mode=display">\sigma_2=Y=\left[  \begin{matrix} 0 & -i \\ i&0 \end{matrix}  \right]</script><script type="math/tex; mode=display">\sigma_3=Z=\left[  \begin{matrix} 1 & 0 \\ 0&-1 \end{matrix}  \right]</script>
     </div>
 
     
@@ -320,7 +323,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>
@@ -404,6 +407,63 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
